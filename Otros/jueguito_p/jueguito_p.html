@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Chimbo</title>
+    <script src="codigo/rpg.js"></script>
+
+</head>
+<body>
+    <h1>RPG Chimbo</h1>
+    <h1>🪓🧱✨</h1>
+    <section id="clase">
+        <h2>Selecciona tu clase</h2>
+
+            <Input type="radio" name="clase" id="picaro"/>
+            <label for="picaro">picaro</label>
+
+            <Input type="radio" name="clase" id="guerrero"/>
+            <label for="guerrero">guerrero</label>
+
+            <Input type="radio" name="clase" id="mago"/>
+            <label for="mago">mago</label>
+
+        <Button id="b_clase">Dale</Button>
+    </section>
+    <Section id="lucha">
+        <h2>Pelea</h2>
+        <p>Tu vida <span>10</span></p>
+        <p>Vida enemiga <span>10</span></p>
+        <p>
+            <button id="b_ataque">Ataque 🪓 </button>
+            <button id="b_defensa">Defensa 🧱 </button>
+            <button id="b_magia">Magia ✨ </button>
+        </p>
+    </Section>
+    <section id="mensajes">
+        <p> Usaste Ataque, Tu enemigo Uso Magia, Perdiste </p>
+    </section>
+</body>
+</html>

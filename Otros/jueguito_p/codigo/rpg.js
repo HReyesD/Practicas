@@ -5,8 +5,8 @@ window.addEventListener("load",Iniciar)
 let ataqueJugador
 let ataqueEnemigo
 let resultadoCombate
-let tuVida = 10
-let vidaEnemiga = 10
+let tuVida = 5
+let vidaEnemiga = 5
    
     function Iniciar () {
 
@@ -95,11 +95,20 @@ let vidaEnemiga = 10
         let tu_vida = document.getElementById("tu_vida")
         let vida_enemiga = document.getElementById("vida_enemiga")
 
-        if(ataqueEnemigo==ataqueJugador) {crearMensaje ('Empate')}
+        if(ataqueEnemigo==ataqueJugador) {crearMensaje ('Empate')
+
+            /*vidaEnemiga++
+            vida_enemiga.innerHTML = vidaEnemiga
+            tuVida++
+            tu_vida.innerHTML = tuVida*/
+    }
 
         else if((ataqueJugador == 'magia' && ataqueEnemigo == 'defensa') || (ataqueJugador == 'ataque' && ataqueEnemigo == 'magia') || (ataqueJugador == 'defensa' && ataqueEnemigo == 'ataque')) {
             crearMensaje ('Victoria')
+            vidaEnemiga--
+            vida_enemiga.innerHTML = vidaEnemiga
         }
+
        /* else if(ataqueJugador == 'magia' && ataqueEnemigo == 'defensa'){
             crearMensaje ('Victoria')
         }
@@ -109,11 +118,28 @@ let vidaEnemiga = 10
         else if(ataqueJugador == 'defensa' && ataqueEnemigo == 'ataque'){
             crearMensaje ('Victoria')
         }*/
+
         else{crearMensaje ('Derrota')
         tuVida--
-        tu_vida.innerHTML = tuVida
+        tu_vida.innerHTML = tuVida 
+    }
+
+        revisarVidas() 
     
     }
+    function revisarVidas(){
+
+        if (vidaEnemiga == 0) {crearMensajeFinal("FELICITACIONES! Eres la Verga 🍆")}
+
+        else if(tuVida == 0) {crearMensajeFinal('Perdiste Looser 👮‍♂️')}
+    }
+
+    function crearMensajeFinal(resultadoFinal){
+
+        let sectionMensajes=document.getElementById('mensajes')
+        let parrafo=document.createElement('p')
+        parrafo.innerHTML=resultadoFinal
+        sectionMensajes.appendChild(parrafo)
 
 
     }
@@ -126,8 +152,6 @@ let vidaEnemiga = 10
 
     }
     function a(min, max) {return Math.floor(Math.random() * (max - min + 1) + min)}
-
-
 
 
 

@@ -11,36 +11,47 @@
 
 </head>
 <body>
-    <h1>RPG Chimbo</h1>
-    <h1>⚔ 🛡 ✨ </h1>
-    <section id="clase">
-        <h2>Selecciona tu clase</h2>
+    <div class="container p-4"> 
+        <div class="row">
+         <div class="col-md-4 mx-auto text-center">
+          <div class="card">
+           
+        <h1>RPG Chimbo</h1>
+        <h1>⚔ 🛡 ✨ </h1>
+        <button id='b_inicio'>Comenzar</button>
+         <section id="clase">
+            <h2>Selecciona tu clase</h2>
 
-            <Input type="radio" name="clase" id="picaro"/>
-            <label for="picaro">Picaro</label>
+                <Input type="radio" name="clase" id="picaro"/>
+                <label for="picaro">Picaro</label>
 
-            <Input type="radio" name="clase" id="guerrero"/>
-            <label for="guerrero">Guerrero</label>
+                <Input type="radio" name="clase" id="guerrero"/>
+                <label for="guerrero">Guerrero</label>
 
-            <Input type="radio" name="clase" id="mago"/>
-            <label for="mago">Mago</label>
+                <Input type="radio" name="clase" id="mago"/>
+                <label for="mago">Mago</label>
 
-        <Button id="b_clase">Dale</Button>
-    </section>
-    <Section id="lucha">
-        <h2>Pelea</h2>
-        <p>Tu <span id = 'tu_clase'></span> tiene <span id="tu_vida">5</span> de vida</p> 
-        <p>El <span id = "tu_enemigo"></span> enemigo tiene <span id="vida_enemiga">5</span> de vida </p> 
-        <p>
-            <button id="b_ataque">Ataque ⚔ </button>
-            <button id="b_defensa">Defensa 🛡 </button>
-            <button id="b_magia">Magia ✨ </button>
-        </p>
-    </Section>
-    <section id="mensajes"></section>
-    <section id="reiniciar">
-        <button id="b_reiniciar">Reiniciar</button>
-    </section>
+                <Button id="b_clase">Verguisa</Button>
+            </section>
+            <Section id="lucha">
+                <h2>Pelea</h2>
+                <p>Tu <span id = 'tu_clase'></span> tiene <span id="tu_vida">5</span> de vida</p> 
+                <p>El <span id = "tu_enemigo"></span> enemigo tiene <span id="vida_enemiga">5</span> de vida </p> 
+                <p>
+                    <button id="b_ataque">Ataque ⚔ </button>
+                    <button id="b_defensa">Defensa 🛡 </button>
+                    <button id="b_magia">Magia ✨ </button>
+                </p>
+            </Section>
+            <section id="mensajes"></section>
+            <section id="reiniciar">
+                <button id="b_reiniciar">Reiniciar</button>
+            </section>
+          </div>
+         </div>
+        </div>
+    </div>
+    
 </body>
 
 </html>

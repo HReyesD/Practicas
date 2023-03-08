@@ -10,24 +10,43 @@ let vidaEnemiga = 5
    
     function Iniciar () {
 
+        let bIniciar= document.getElementById('b_inicio')
+            bIniciar.addEventListener('click', botonIniciar)
         let bClase = document.getElementById('b_clase')
             bClase.addEventListener('click', sClase)
-
         let bAtaque = document.getElementById('b_ataque')
             bAtaque.addEventListener('click', fAtaque)
-
         let bDefensa = document.getElementById('b_defensa')
             bDefensa.addEventListener('click', fDefensa)
-
         let bMagia = document.getElementById('b_magia')
             bMagia.addEventListener('click', fMagia)
-
         let bReinicia = document.getElementById('b_reiniciar')
             bReinicia.addEventListener('click', botonReiniciar)
+
+        let seccionClase = document.getElementById('clase')
+        seccionClase.style.display = 'none'
+        let seccionLucha = document.getElementById('lucha')
+        seccionLucha.style.display = 'none'
+        let seccionMensajesOculto = document.getElementById('mensajes')
+        seccionMensajesOculto.style.display = 'none'
+        let seccionreiniciar = document.getElementById('reiniciar')
+        seccionreiniciar.style.display = 'none'
+
+    }
+    function botonIniciar() {
+
+        let seccionClase = document.getElementById('clase')
+        seccionClase.style.display = 'block'
+
 
     }
 
     function sClase(){
+
+        let seccionLucha = document.getElementById('lucha')
+        seccionLucha.style.display = 'block'
+        let seccionClase = document.getElementById('clase')
+        seccionClase.style.display = 'none'
 
         let picaro = document.getElementById('picaro')
         let guerrero = document.getElementById('guerrero')
@@ -66,17 +85,27 @@ let vidaEnemiga = 5
 
     function fAtaque () {
 
+        let seccionMensajesOculto = document.getElementById('mensajes')
+        seccionMensajesOculto.style.display = 'block'
+
         ataqueJugador = 'ataque'
         aAleatorioEnemigo(a)
 
+
     }
     function fDefensa() {
+
+        let seccionMensajesOculto = document.getElementById('mensajes')
+        seccionMensajesOculto.style.display = 'block'
 
         ataqueJugador = 'defensa'
         aAleatorioEnemigo(a)
 
     }
     function fMagia () {
+
+        let seccionMensajesOculto = document.getElementById('mensajes')
+        seccionMensajesOculto.style.display = 'block'
 
         ataqueJugador = 'magia'
         aAleatorioEnemigo(a)
@@ -132,9 +161,19 @@ let vidaEnemiga = 5
     }
     function revisarVidas(){
 
-        if (vidaEnemiga == 0) {crearMensajeFinal("FELICITACIONES! Eres la Verga 🍆")}
+        if (vidaEnemiga == 0) {crearMensajeFinal("FELICITACIONES! Eres la Verga 🍆")
+            {   
+                let seccionreiniciar = document.getElementById('reiniciar')
+                    seccionreiniciar.style.display = 'block'
+                }
+            }
 
-        else if(tuVida == 0) {crearMensajeFinal('Perdiste Looser 👮‍♂️')}
+        else if(tuVida == 0) {crearMensajeFinal('Perdiste Looser 👮‍♂️') 
+            {    
+                let seccionreiniciar = document.getElementById('reiniciar')
+                    seccionreiniciar.style.display = 'block' 
+                }
+            }
     }
 
     function crearMensajeFinal(resultadoFinal){
@@ -143,6 +182,15 @@ let vidaEnemiga = 5
         let parrafo=document.createElement('p')
         parrafo.innerHTML=resultadoFinal
         sectionMensajes.appendChild(parrafo)
+
+        let bAtaque = document.getElementById('b_ataque')
+            bAtaque.disabled = true
+      
+        let bDefensa = document.getElementById('b_defensa')
+            bDefensa.disabled = true
+
+        let bMagia = document.getElementById('b_magia')
+            bMagia.disabled = true
 
 
     }

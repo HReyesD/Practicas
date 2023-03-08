@@ -22,6 +22,9 @@ let vidaEnemiga = 5
         let bMagia = document.getElementById('b_magia')
             bMagia.addEventListener('click', fMagia)
 
+        let bReinicia = document.getElementById('b_reiniciar')
+            bReinicia.addEventListener('click', botonReiniciar)
+
     }
 
     function sClase(){
@@ -150,6 +153,9 @@ let vidaEnemiga = 5
         mensaje.innerHTML = 'Usaste ' + ataqueJugador + ' Y tu enemigo uso ' + ataqueEnemigo + ' - ' + resultadoCombate
         seccionMensaje.appendChild(mensaje)
 
+    }
+    function botonReiniciar() {
+        location.reload()
     }
     function a(min, max) {return Math.floor(Math.random() * (max - min + 1) + min)}
 
